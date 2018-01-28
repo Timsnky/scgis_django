@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+    <h3>All Members</h3>
+
+    {% for user in userProfiles %}
+        <div class="col-md-3">
+            <a href="/users/profile/{{ user.id }}"><img src="{{ MEDIA_URL }}images/members/ph.jpg"/></a>
+            <p>
+                <a href="/users/profile/{{ user.id }}">{{ user.user.first_name }} {{ user.user.last_name }}</a>
+            </p>
+            <p>{{ user.job_title }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

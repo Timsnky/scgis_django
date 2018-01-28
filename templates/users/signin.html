@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+    <h1>Sign In</h1>
+    <div class="center col-lg-6 col-md-6 col-sm-12">
+        <form role="form" method="POST" action="{% url 'users.signIn' %}">
+            {% csrf_token %}
+            {{ signInForm.as_p }}
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Login</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}
+

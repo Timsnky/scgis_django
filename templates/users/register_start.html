@@ -1,0 +1,17 @@
+{% extends "layouts/default.html"  %}
+
+{% block content %}
+
+    <h1>Join SCGIS</h1>
+
+    <div class="center col-lg-6 col-md-6 col-sm-12">
+        <form role="form" method="POST" action="{% url 'users.registerStart' %}">
+            {% csrf_token %}
+            {{ registerForm.as_p }}
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Continue</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+    <h3>My Profile</h3>
+{#    <p><a href="/users/edit/{{ user.id }}" class="btn btn-success">Edit Profile</a> </p>#}
+    <p>Name: {{ user.user.first_name }} {{ user.user.last_name }}</p>
+    <p>Email: {{ user.user.email }}</p>
+    <p>Job Title: {{ user.job_title }}</p>
+    <p>Organzation: {{ user.organization }}</p>
+    <p>Address: {{ user.address }}</p>
+    <p>State: {{ user.state }}</p>
+    <p>Country: {{ user.country }}</p>
+    <p>About Me: {{ user.bio }}</p>
+{#    <p>Membership Type: {{ user.membership_level.name }}</p>#}
+{% endblock content %}
+
